@@ -1,0 +1,8 @@
+/* This composition is no longer being used (as of 14/03/2022) as the sidebar composition achieves the desired result */
+@media (min-width: 50em) {
+  .breakpoint-grid {
+    grid-template-columns: 1fr var(--sidebar-target-width, 20rem);
+    display: grid;
+    gap: var(--gutter, var(--space-s-l));
+  }
+}

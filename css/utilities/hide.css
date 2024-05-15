@@ -1,0 +1,15 @@
+@media (max-width: 50em) {
+  .hide[data-visible="large"] {
+    display: none;
+  }
+}
+
+@media (min-width: 50em) {
+  .hide[data-visible="small"] {
+    display: none;
+  }
+}
+
+.hide[data-visible="none"] {
+  display: none;
+}

@@ -1,0 +1,138 @@
+{
+  "data": {
+    "eventList": {
+      "items": [
+        {
+          "_path": "/content/dam/nhm-events/GENAD-ADM/event",
+          "eventName": "General South Kensington Admission",
+          "location": null,
+          "date": "The Museum is open Monday to Sunday 10.00-17.50 (last entry at 17.00).",
+          "price": "Free + Optional Donation",
+          "membersPrice": null,
+          "age18Only": false,
+          "link": "https://www.nhm.ac.uk/visit.html",
+          "primaryTags": null,
+          "text": {
+            "html": "<p>Whether you're gazing up at the colossal&nbsp;<b>blue whale&nbsp;</b>skeleton in Hintze Hall or delving into the Earth's history in the Minerals gallery, there's always something new to discover</p>\n<p>Test</p>\n<p>What's On version</p>\n"
+          },
+          "_variations": ["ticketing", "what_s_on", "dino_directory"],
+          "imagePath": {
+            "_path": "https://www.nhm.ac.uk/resources/visit/wpy/2023/large/webp/5ab9bbc7-2ea2-45a3-8979-c32060c20e9d.webp",
+            "width": 3556,
+            "height": 2000
+          },
+          "imageAltText": "Morris"
+        },
+        {
+          "_path": "/content/dam/nhm-events/brds-amr/john-james-audubon-and-his-birds-of-america",
+          "eventName": "John James Audubon and his Birds of America",
+          "location": null,
+          "date": "Now open until August 2024",
+          "price": "Free",
+          "membersPrice": null,
+          "age18Only": false,
+          "link": "https://www.nhm.ac.uk/visit/exhibitions/john-james-audubon-birds-of-america.html",
+          "primaryTags": null,
+          "text": {
+            "html": "<p>This free display of engravings from John James Audubon's The Birds of America&nbsp;reaffirms why it continues to inspire artists, bird experts and conservationists alike.&nbsp;&nbsp;</p>\n"
+          },
+          "_variations": [],
+          "imagePath": {
+            "_path": "https://www.nhm.ac.uk/resources/visit/wpy/2021/large/webp/791f9b15-af86-4442-ab51-ef2221342038.webp",
+            "width": 1920,
+            "height": 1171,
+            "_publishUrl": "https://www.nhm.ac.uk/content/dam/nhm-events/brds-amr/audubon-puffins.jpg.thumb.1920.1920.jpg"
+          },
+          "imageAltText": "An illustration of Atlantic puffins.  Engraved print on paper. Plate 213 in The Birds of America (1834)."
+        },
+        {
+          "_path": "/content/dam/nhm-events/dns-dns/dawnosaurs--relaxed-morning-visit",
+          "eventName": "Dawnosaurs: Relaxed Morning Visit",
+          "location": null,
+          "date": null,
+          "price": null,
+          "membersPrice": null,
+          "age18Only": false,
+          "link": null,
+          "primaryTags": null,
+          "text": {
+            "html": "<p>Dawnosaurs is a free event for neurodivergent children (including autism ADHD, Tourette’s, OCD&nbsp;and other sensory processing difficulties).</p>\n"
+          },
+          "_variations": [],
+          "imagePath": {
+            "_path": "https://www.nhm.ac.uk/events/dawnosaurs/_jcr_content/parentpar/row2cells21_1197206617/par/image.img.jpg/1708609908644.jpg",
+            "width": 3556,
+            "height": 2000,
+            "_publishUrl": "https://www.nhm.ac.uk/events/dawnosaurs/_jcr_content/parentpar/row2cells21_1197206617/par/image.img.jpg/1708609908644.jpg"
+          },
+          "imageAltText": null
+        },
+        {
+          "_path": "/content/dam/nhm-events/exh-wpy59/exh-wpy59",
+          "eventName": "Wildlife Photographer of the Year (includes Museum admission)",
+          "location": null,
+          "date": "on until 30 June 2024",
+          "price": "£4.50 - £19.50 per person",
+          "membersPrice": null,
+          "age18Only": false,
+          "link": "https://www.nhm.ac.uk/visit/exhibitions/wildlife-photographer-of-the-year.html",
+          "primaryTags": [
+            "natural-history-museum/art-and-science",
+            "natural-history-museum/exhibitions",
+            "natural-history-museum/people-and-planet"
+          ],
+          "text": {
+            "html": "<p>From sprawling urban metropolises to deep polar seas, explore the planet's habitats through stunning imagery, soundscapes, videos and expert insights. We hope you'll leave awe-inspired by nature, with a renewed drive to protect it.</p>\n"
+          },
+          "_variations": [],
+          "imagePath": {
+            "_path": "https://www.nhm.ac.uk/resources/visit/wpy/2021/large/webp/791f9b15-af86-4442-ab51-ef2221342038.webp",
+            "width": 1920,
+            "height": 750,
+            "_publishUrl": "https://www.nhm.ac.uk/resources/visit/wpy/2021/large/webp/791f9b15-af86-4442-ab51-ef2221342038.webp"
+          },
+          "imageAltText": "A photo of three cheetahs in water"
+        },
+        {
+          "_path": "/content/dam/nhm-events/titan-tadm/TITAN-TADM",
+          "eventName": "Titanosaur: Life as the Biggest Dinosaur",
+          "location": "Waterhouse Gallery, South Kensington, London",
+          "date": "31 March 2023 - 14 Jan 2024",
+          "price": "£6.50 - £16 per person",
+          "membersPrice": null,
+          "age18Only": false,
+          "link": "https://www.nhm.ac.uk/visit/exhibitions/titanosaur.html",
+          "primaryTags": ["nhm:whats-on/dinosaurs", "nhm:whats-on/earthquakes"],
+          "text": {
+            "html": "<p>Step into the world of the magnificent titanosaur Patagotitan mayorum - the largest known creature to have walked the Earth. Barely fitting in the nine-metre-high Waterhouse Gallery, the extraordinary creature will be surrounded by the story of how it survived and thrived. Lorem ipsum.</p>\n"
+          },
+          "_variations": [],
+          "imagePath": null,
+          "imageAltText": null
+        },
+        {
+          "_path": "/content/dam/nhm-events/tou-wisp/women-in-science-tour--palaeontology-tour",
+          "eventName": "Women in Science Tour: Palaeontology",
+          "location": null,
+          "date": null,
+          "price": null,
+          "membersPrice": null,
+          "age18Only": false,
+          "link": "https://www.nhm.ac.uk/events/women-in-science-palaeontology.html",
+          "primaryTags": ["natural-history-museum:whats-on/tour"],
+          "text": {
+            "html": "<p>Discover the fascinating work of female palaeontologists whose research has contributed to our understanding of fossils and ancient life.</p>\n"
+          },
+          "_variations": [],
+          "imagePath": {
+            "_path": "https://www.nhm.ac.uk/content/dam/wpy/Ashes-of-a-wetland-donate-image.jpg.thumb.1160.1160.jpg",
+            "width": 1160,
+            "height": 600,
+            "_publishUrl": "https://www.nhm.ac.uk/content/dam/nhm-events/tou-wisp/susie-maidment-sundance-formation-full-width.jpg"
+          },
+          "imageAltText": "Museum palaeontologist Susie Maidment working on excavating a fossil"
+        }
+      ]
+    }
+  }
+}

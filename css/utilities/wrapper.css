@@ -1,0 +1,16 @@
+/*
+WRAPPER UTILITY
+A common wrapper/container
+*/
+.wrapper {
+  margin-inline: auto;
+  max-width: var(--max-page-width);
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+  position: relative;
+}
+
+[data-wrapper-flush] {
+  padding-left: 0;
+  padding-right: 0;
+}

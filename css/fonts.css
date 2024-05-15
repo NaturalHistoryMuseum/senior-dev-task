@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "NHM Wallop Headline";
+  src: url("../public/fonts/NHMWallopHeadline.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NHM Wallop Text";
+  src: url("../public/fonts/NHMWallopText.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}

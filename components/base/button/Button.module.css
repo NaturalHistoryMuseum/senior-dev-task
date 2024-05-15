@@ -1,0 +1,82 @@
+/* The .button class is always applied, other classes are modifiers that are applied conditionally. There should always be one selected via the 'variant' prop on the button component (See IButton ts interface for a clear list of variants).
+The modifier classes set the value of custom properties that are used by the button component to set the styles.
+*/
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+  outline-offset: 4px;
+  border: none;
+  max-width: 100%;
+}
+
+.button[data-theme="primary"] {
+  background: var(--color-grey-900);
+  color: var(--color-white);
+}
+
+.button[data-theme="grey"] {
+  background: var(--color-grey);
+}
+
+.button[data-theme="light"] {
+  background: var(--color-white);
+  color: var(--color-grey-900);
+}
+.button[data-theme="secondary-dark"] {
+  background: transparent;
+  border: 2px solid var(--color-grey-900);
+}
+
+.button[data-text-align="left"] {
+  justify-content: start;
+}
+
+.button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.button svg path {
+  fill: currentColor;
+}
+
+/* PRIMARY BUTTON STYLES */
+.button.primary {
+  background: var(--theme-color-cta);
+  color: var(--theme-color-cta-text);
+  border: 2px solid var(--theme-color-cta);
+}
+
+.button.primary:hover {
+  background: transparent;
+  color: var(--theme-color);
+  border: 2px solid var(--theme-color);
+}
+
+/* SECONDARY BUTTON STYLES */
+.button.secondary {
+  background: transparent;
+  color: var(--theme-color);
+  border: 2px solid var(--theme-color);
+}
+
+.button.secondary:hover {
+  background: var(--theme-color-cta);
+  color: var(--theme-color-cta-text);
+  border: 2px solid var(--theme-color);
+}
+
+.button.donate {
+  background: var(--color-donate);
+  color: var(--color-grey-900);
+  border: 2px solid var(--color-donate);
+}
+
+.button[data-visible="true"] {
+  display: flex;
+}

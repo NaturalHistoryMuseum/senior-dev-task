@@ -1,0 +1,580 @@
+/*
+
+IMPORTANT: How theme variables work, e.g., --theme-cta-primary--border-color_focus-visible
+`--theme` - sets default the theme variable reference at the beginning of each theme-related variable
+`-cta` - sets the component type, e.g., cta, input, etc.
+`-primary` - sets the component variant, e.g., primary, secondary, tertiary, etc.
+`--border` - sets the component part, e.g., border, background, text, margin, padding, outline, etc.
+`-color` - sets the styling of a component part , e.g., radius (as in border-radius), top (as in margin-top), offset (as in outline-offset), etc.
+`_focus-visible` - sets the component state, e.g., focus, hover, disabled, etc.
+
+*/
+
+/* Sets the background color and text color of any element with a theme applied to that of the corresponding theme */
+[data-theme] {
+  background-color: var(--theme--background-color);
+  color: var(--theme--text-color);
+}
+
+.bg-theme-fullbleed {
+  background: var(--theme--background-color);
+  box-shadow: 0 0 0 100vmax var(--theme--background-color, none);
+  clip-path: inset(0 -100vmax);
+}
+
+/* DEFAULT THEME */
+:root,
+[data-theme="default"] {
+  --theme--background-color: var(--color-white);
+  --theme--text-color: var(--color-grey-900);
+  --theme--text-color--secondary: var(--color-grey-700);
+
+  /* CTA CUSTOM PROPERTIES */
+  /* primary */
+  --theme-cta-primary--background-color: var(--color-night-blue-900);
+  --theme-cta-primary--background-color_hover: var(--color-lime-green-500);
+  --theme-cta-primary--background-color_focus: var(--color-lime-green-600);
+  --theme-cta-primary--background-color_focus-visible: var(
+    --color-night-blue-900
+  );
+  --theme-cta-primary--background-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-primary--border-color: var(--color-night-blue-900);
+  --theme-cta-primary--border-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--text-color: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_hover: var(--color-night-blue-900);
+  --theme-cta-primary--text-color_focus: var(--color-night-blue-900);
+  --theme-cta-primary--text-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_disabled: var(--color-white);
+
+  /* secondary */
+  --theme-cta-secondary--background-color: var(--color-white);
+  --theme-cta-secondary--background-color_hover: var(--color-grey-200);
+  --theme-cta-secondary--background-color_focus: var(--color-grey-300);
+  --theme-cta-secondary--background-color_focus-visible: var(--color-white);
+  --theme-cta-secondary--background-color_disabled: var(--color-grey-200);
+  --theme-cta-secondary--outline-color_focus-visible: var(
+    --color-night-blue-900
+  );
+  --theme-cta-secondary--border-color: var(--color-night-blue-900);
+  --theme-cta-secondary--border-color_disabled: var(--color-grey-500);
+  --theme-cta-secondary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-secondary--text-color: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_hover: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_focus: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_focus-visible: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_disabled: var(--color-grey-700);
+
+  /* tertiary */
+  --theme-cta-tertiary--background-color: transparent;
+  --theme-cta-tertiary--background-color_hover: var(--color-grey-200);
+  --theme-cta-tertiary--background-color_focus: var(--color-grey-300);
+  --theme-cta-tertiary--background-color_focus-visible: transparent;
+  --theme-cta-tertiary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-tertiary--text-color: var(--color-night-blue-900);
+  --theme-cta-tertiary--text-color_disabled: var(--color-grey-400);
+
+  /* selector */
+  --theme-cta-selector--background-color: var(--color-white);
+  --theme-cta-selector--background-color_hover: var(--color-grey-200);
+  --theme-cta-selector--background-color_focus: var(
+    --color-rainforest-green-800
+  );
+  --theme-cta-selector--background-color_focus-visible: var(--color-white);
+  --theme-cta-selector--background-color_disabled: var(--color-grey-100);
+  --theme-cta-selector--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-selector--border-color: var(--color-grey-400);
+  --theme-cta-selector--border-color_hover: var(--color-grey-900);
+  --theme-cta-selector--border-color_focus-visible: var(--color-grey-400);
+  --theme-cta-selector--border-color_disabled: var(--color-grey-100);
+  --theme-cta-selector--text-color: var(--color-grey-900);
+  --theme-cta-selector--text-color_hover: var(--color-grey-900);
+  --theme-cta-selector--text-color_focus: var(--color-white);
+  --theme-cta-selector--text-color_focus-visible: var(--color-grey-900);
+  --theme-cta-selector--text-color_disabled: var(--color-grey-700);
+
+  /* text */
+  --theme-cta-text--background-color: transparent;
+  --theme-cta-text--border-color: var(--theme--background-color);
+  --theme-cta-text--border-color_hover: var(--color-grey-900);
+  --theme-cta-text--border-color_focus: currentColor;
+  --theme-cta-text--border-color_focus-visible: var(--theme--background-color);
+  --theme-cta-text--text-color: var(--color-grey-900);
+  --theme-cta-text--outline-color_focus-visible: var(--color-azure-blue);
+  /* END CTA CUSTOM PROPERTIES */
+
+  /** INPUT CUSTOM PROPERTIES */
+  --theme-input--background-color: var(--color-white);
+  --theme-input--border-color: var(--color-grey-900);
+  --theme-input--icon-color: var(--color-grey-900);
+  --theme-input--placeholder-color: var(--color-grey-600);
+  --theme-input--text-color: var(--color-grey-900);
+
+  --theme-input--label-color: var(--color-grey-900);
+  --theme-input--label-optional-color: var(--color-grey-900);
+
+  --theme-input--background-color_disabled: var(--color-grey-200);
+  --theme-input--border-color_disabled: var(--color-grey-600);
+  --theme-input--icon-color_disabled: var(--color-grey-700);
+
+  --theme-input--label-color_disabled: var(--color-grey-700);
+
+  --theme-input--background-color_focus: var(--color-grey-50);
+  --theme-input--outline-color_focus: var(--color-azure-blue);
+  /** END INPUT CUSTOM PROPERTIES */
+}
+
+/* OFF-WHITE */
+[data-theme="off-white"] {
+  --theme--background-color: var(--color-grey-100);
+  --theme--text-color: var(--color-grey-900);
+
+  /* CTA CUSTOM PROPERTIES */
+  /* primary */
+  --theme-cta-primary--background-color: var(--color-night-blue-900);
+  --theme-cta-primary--background-color_hover: var(--color-lime-green-500);
+  --theme-cta-primary--background-color_focus: var(--color-lime-green-600);
+  --theme-cta-primary--background-color_focus-visible: var(
+    --color-night-blue-900
+  );
+  --theme-cta-primary--background-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-primary--border-color: var(--color-night-blue-900);
+  --theme-cta-primary--border-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--text-color: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_hover: var(--color-night-blue-900);
+  --theme-cta-primary--text-color_focus: var(--color-night-blue-900);
+  --theme-cta-primary--text-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_disabled: var(--color-white);
+
+  /* secondary */
+  --theme-cta-secondary--background-color: var(--color-grey-100);
+  --theme-cta-secondary--background-color_hover: var(--color-grey-300);
+  --theme-cta-secondary--background-color_focus: var(--color-grey-350);
+  --theme-cta-secondary--background-color_focus-visible: var(--color-grey-100);
+  --theme-cta-secondary--background-color_disabled: var(--color-grey-200);
+  --theme-cta-secondary--outline-color_focus-visible: var(
+    --color-night-blue-900
+  );
+  --theme-cta-secondary--border-color: var(--color-night-blue-900);
+  --theme-cta-secondary--border-color_disabled: var(--color-grey-500);
+  --theme-cta-secondary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-secondary--text-color: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_hover: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_focus: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_focus-visible: var(--color-night-blue-900);
+  --theme-cta-secondary--text-color_disabled: var(--color-grey-700);
+
+  /* tertiary */
+  --theme-cta-tertiary--background-color: transparent;
+  --theme-cta-tertiary--background-color_hover: var(--color-grey-300);
+  --theme-cta-tertiary--background-color_focus: var(--color-grey-350);
+  --theme-cta-tertiary--background-color_focus-visible: transparent;
+  --theme-cta-tertiary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-tertiary--text-color: var(--color-night-blue-900);
+  --theme-cta-tertiary--text-color_disabled: var(--color-grey-500);
+
+  /* selector */
+  --theme-cta-selector--background-color: var(--color-grey-100);
+  --theme-cta-selector--background-color_hover: var(--color-grey-300);
+  --theme-cta-selector--background-color_focus: var(
+    --color-rainforest-green-800
+  );
+  --theme-cta-selector--background-color_focus-visible: var(--color-grey-100);
+  --theme-cta-selector--background-color_disabled: var(--color-grey-200);
+  --theme-cta-selector--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-selector--border-color: var(--color-grey-400);
+  --theme-cta-selector--border-color_hover: var(--color-grey-900);
+  --theme-cta-selector--border-color_focus-visible: var(--color-grey-400);
+  --theme-cta-selector--border-color_disabled: var(--color-grey-200);
+  --theme-cta-selector--text-color: var(--color-grey-900);
+  --theme-cta-selector--text-color_hover: var(--color-grey-900);
+  --theme-cta-selector--text-color_focus: var(--color-white);
+  --theme-cta-selector--text-color_focus-visible: var(--color-grey-900);
+  --theme-cta-selector--text-color_disabled: var(--color-grey-700);
+
+  /* text */
+  --theme-cta-text--background-color: transparent;
+  --theme-cta-text--border-color: var(--theme--background-color);
+  --theme-cta-text--border-color_hover: var(--color-grey-900);
+  --theme-cta-text--border-color_focus-visible: var(--theme--background-color);
+  --theme-cta-text--text-color: var(--color-grey-900);
+  --theme-cta-text--outline-color_focus-visible: var(--color-azure-blue);
+
+  /* tonal */
+  --theme-cta-tonal--background-color: var(--color-grey-200);
+  --theme-cta-tonal--background-color_hover: var(--color-grey-300);
+  --theme-cta-tonal--background-color_focus: var(--color-grey-350);
+  --theme-cta-tonal--background-color_focus-visible: var(--color-grey-200);
+  --theme-cta-tonal--background-color_selected: var(--color-night-blue-900);
+  --theme-cta-tonal--text-color_selected: var(--color-white);
+  --theme-cta-tonal--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-tonal--border-color: var(--color-grey-200);
+  --theme-cta-tonal--border-color_hover: var(--color-grey-300);
+  --theme-cta-tonal--border-color_focus: var(--color-grey-350);
+  --theme-cta-tonal--border-color_focus-visible: var(--color-grey-200);
+  --theme-cta-tonal--border-color_selected: var(--color-night-blue-900);
+  --theme-cta-tonal--text-color: var(--color-night-blue-900);
+  --theme-cta-tonal-text-color_hover: var(--color-night-blue-900);
+  --theme-cta-tonal-text-color_focus: var(--color-night-blue-900);
+  --theme-cta-tonal-text-color_focus-visible: var(--color-night-blue-900);
+  --theme-cta-tonal-text-color_selected: var(--color-white);
+  /* END CTA CUSTOM PROPERTIES */
+
+  /** INPUT CUSTOM PROPERTIES */
+  /* Properties that are used but not declared in a theme are applied to all themes from the :root declaration */
+  --theme-input--border-color: var(--color-grey-600);
+
+  --theme-input--label-color: var(--color-grey-900);
+  --theme-input--label-optional-color: var(--color-grey-700);
+
+  --theme-input--label-color_disabled: var(--color-grey-700);
+
+  --theme-input--background-color_focus: var(--color-grey-50);
+  --theme-input--outline-color_focus: var(--color-azure-blue);
+  /** END INPUT CUSTOM PROPERTIES */
+}
+
+[data-theme="night-blue"] {
+  --theme--background-color: var(--color-night-blue-900);
+  --theme--text-color: var(--color-white);
+  --theme--text-color--secondary: var(--color-grey-300);
+
+  /* CTA CUSTOM PROPERTIES */
+  /* primary */
+  --theme-cta-primary--background-color: var(--color-lime-green-500);
+  --theme-cta-primary--background-color_hover: var(--color-night-blue-800);
+  --theme-cta-primary--background-color_focus: var(--color-night-blue-700);
+  --theme-cta-primary--background-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-primary--background-color_disabled: var(--color-grey-400);
+  --theme-cta-primary--outline-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-primary--border-color: var(--color-lime-green-500);
+  --theme-cta-primary--border-color_disabled: var(--color-grey-400);
+  --theme-cta-primary--text-color: var(--color-night-blue-900);
+  --theme-cta-primary--text-color_hover: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_focus: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_focus-visible: var(--color-night-blue-900);
+  --theme-cta-primary--text-color_disabled: var(--color-grey-800);
+
+  /* secondary */
+  --theme-cta-secondary--background-color: var(--color-night-blue-900);
+  --theme-cta-secondary--background-color_hover: var(--color-night-blue-800);
+  --theme-cta-secondary--background-color_focus: var(--color-night-blue-700);
+  --theme-cta-secondary--background-color_focus-visible: var(
+    --color-night-blue-900
+  );
+  --theme-cta-secondary--background-color_disabled: var(--color-night-blue-900);
+  --theme-cta-secondary--outline-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-secondary--border-color: var(--color-lime-green-500);
+  --theme-cta-secondary--border-color_disabled: var(--color-white);
+  --theme-cta-secondary--text-color: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_hover: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_focus: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_disabled: var(--color-grey-200);
+
+  /* tertiary */
+  --theme-cta-tertiary--background-color: transparent;
+  --theme-cta-tertiary--background-color_hover: var(--color-night-blue-800);
+  --theme-cta-tertiary--background-color_focus: var(--color-night-blue-700);
+  --theme-cta-tertiary--background-color_focus-visible: transparent;
+  --theme-cta-tertiary--outline-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-tertiary--text-color: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_hover: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_focus: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_disabled: var(--color-white);
+
+  /* text */
+  --theme-cta-text--background-color: transparent;
+  --theme-cta-text--border-color: var(--theme--background-color);
+  --theme-cta-text--border-color_hover: var(--color-white);
+  --theme-cta-text--border-color_focus-visible: var(--theme--background-color);
+  --theme-cta-text--text-color: var(--color-white);
+  --theme-cta-text--outline-color_focus-visible: var(--color-lime-green-500);
+
+  /* tonal */
+  --theme-cta-tonal--background-color: var(--color-night-blue-800);
+  --theme-cta-tonal--background-color_hover: var(--color-night-blue-700);
+  --theme-cta-tonal--background-color_focus: var(--color-night-blue-600);
+  --theme-cta-tonal--background-color_focus-visible: var(
+    --color-night-blue-800
+  );
+  --theme-cta-tonal--background-color_selected: var(--color-white);
+  --theme-cta-tonal--outline-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-tonal--border-color: var(--color-night-blue-800);
+  --theme-cta-tonal--border-color_hover: var(--color-night-blue-700);
+  --theme-cta-tonal--border-color_focus: var(--color-night-blue-600);
+  --theme-cta-tonal--border-color_focus-visible: var(--color-night-blue-800);
+  --theme-cta-tonal--border-color_selected: var(--color-white);
+  --theme-cta-tonal--text-color: var(--color-white);
+  --theme-cta-tonal--text-color_hover: var(--color-white);
+  --theme-cta-tonal--text-color_focus: var(--color-white);
+  --theme-cta-tonal--text-color_focus-visible: var(--color-white);
+  --theme-cta-tonal--text-color_selected: var(--color-night-blue-900);
+  /* END CTA CUSTOM PROPERTIES */
+
+  /** INPUT CUSTOM PROPERTIES */
+  --theme-input--border-color: var(--color-grey-300);
+
+  --theme-input--label-color: var(--color-white);
+  --theme-input--label-optional-color: var(--color-grey-350);
+
+  --theme-input--border-color_disabled: var(--color-grey-400);
+
+  --theme-input--label-color_disabled: var(--color-grey-400);
+
+  --theme-input--background-color_focus: var(--color-grey-50);
+  --theme-input--outline-color_focus: var(--color-lime-green-500);
+  /** END INPUT CUSTOM PROPERTIES */
+}
+
+/* BLUE */
+[data-theme="blue"] {
+  --theme--background-color: var(--color-aqua-blue-200);
+  --theme--text-color: var(--color-grey-900);
+
+  /* CTA CUSTOM PROPERTIES */
+  /* primary */
+  --theme-cta-primary--background-color: var(--color-grey-900);
+  --theme-cta-primary--background-color_hover: var(--color-white);
+  --theme-cta-primary--background-color_focus: var(--color-grey-100);
+  --theme-cta-primary--background-color_focus-visible: var(--color-grey-900);
+  --theme-cta-primary--background-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-primary--border-color: var(--color-grey-900);
+  --theme-cta-primary--border-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--text-color: var(--color-white);
+  --theme-cta-primary--text-color_hover: var(--color-grey-900);
+  --theme-cta-primary--text-color_focus: var(--color-grey-900);
+  --theme-cta-primary--text-color_focus-visible: var(--color-white);
+  --theme-cta-primary--text-color_disabled: var(--color-white);
+
+  /* secondary */
+  --theme-cta-secondary--background-color: var(--color-aqua-blue-200);
+  --theme-cta-secondary--background-color_hover: var(--color-aqua-blue-400);
+  --theme-cta-secondary--background-color_focus: var(--color-aqua-blue-500);
+  --theme-cta-secondary--background-color_focus-visible: var(
+    --color-aqua-blue-200
+  );
+  --theme-cta-secondary--background-color_disabled: var(--color-grey-300);
+  --theme-cta-secondary--border-color: var(--color-grey-900);
+  --theme-cta-secondary--border-color_disabled: var(--color-grey-500);
+  --theme-cta-secondary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-secondary--text-color: var(--color-grey-900);
+  --theme-cta-secondary--text-color_hover: var(--color-grey-900);
+  --theme-cta-secondary--text-color_focus: var(--color-grey-900);
+  --theme-cta-secondary--text-color_disabled: var(--color-grey-700);
+
+  /* tertiary */
+  --theme-cta-tertiary--background-color: transparent;
+  --theme-cta-tertiary--background-color_hover: var(--color-aqua-blue-400);
+  --theme-cta-tertiary--background-color_focus: var(--color-aqua-blue-500);
+  --theme-cta-tertiary--background-color_focus-visible: transparent;
+  --theme-cta-tertiary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-tertiary--text-color: var(--color-grey-900);
+  --theme-cta-tertiary--text-color_hover: var(--color-grey-900);
+  --theme-cta-tertiary--text-color_focus: var(--color-grey-900);
+  --theme-cta-tertiary--text-color_disabled: var(--color-grey-700);
+
+  /* text */
+  --theme-cta-text--background-color: transparent;
+  --theme-cta-text--border-color: var(--theme--background-color);
+  --theme-cta-text--border-color_hover: var(--color-grey-900);
+  --theme-cta-text--border-color_focus-visible: var(--theme--background-color);
+  --theme-cta-text--text-color: var(--color-grey-900);
+  --theme-cta-text--outline-color_focus-visible: var(--color-azure-blue);
+  /* END CTA CUSTOM PROPERTIES */
+
+  /** INPUT CUSTOM PROPERTIES */
+  --theme-input--label-color: var(--color-grey-900);
+  --theme-input--label-optional-color: var(--color-grey-900);
+
+  --theme-input--label-color_disabled: var(--color-grey-700);
+
+  --theme-input--background-color_focus: var(--color-grey-50);
+  --theme-input--outline-color_focus: var(--color-azure-blue);
+  /** END INPUT CUSTOM PROPERTIES */
+}
+
+/* LIME GREEN */
+[data-theme="lime-green"] {
+  --theme--background-color: var(--color-lime-green-500);
+  --theme--text-color: var(--color-grey-900);
+
+  /* CTA CUSTOM PROPERTIES */
+  /* primary */
+  --theme-cta-primary--background-color: var(--color-grey-900);
+  --theme-cta-primary--background-color_hover: var(--color-white);
+  --theme-cta-primary--background-color_focus: var(--color-grey-100);
+  --theme-cta-primary--background-color_focus-visible: var(--color-grey-900);
+  --theme-cta-primary--background-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-primary--border-color: var(--color-grey-900);
+  --theme-cta-primary--border-color_disabled: var(--color-grey-600);
+  --theme-cta-primary--text-color: var(--color-white);
+  --theme-cta-primary--text-color_hover: var(--color-grey-900);
+  --theme-cta-primary--text-color_focus: var(--color-grey-900);
+  --theme-cta-primary--text-color_focus-visible: var(--color-white);
+  --theme-cta-primary--text-color_disabled: var(--color-white);
+
+  /* secondary */
+  --theme-cta-secondary--background-color: var(--color-lime-green-500);
+  --theme-cta-secondary--background-color_hover: var(--color-lime-green-600);
+  --theme-cta-secondary--background-color_focus: var(--color-lime-green-700);
+  --theme-cta-secondary--background-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-secondary--background-color_disabled: var(--color-grey-300);
+  --theme-cta-secondary--border-color: var(--color-grey-900);
+  --theme-cta-secondary--border-color_disabled: var(--color-grey-500);
+  --theme-cta-secondary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-secondary--text-color: var(--color-grey-900);
+  --theme-cta-secondary--text-color_hover: var(--color-grey-900);
+  --theme-cta-secondary--text-color_focus: var(--color-grey-900);
+  --theme-cta-secondary--text-color_focus-visible: var(--color-grey-900);
+  --theme-cta-secondary--text-color_disabled: var(--color-grey-700);
+
+  /* tertiary */
+  --theme-cta-tertiary--background-color: transparent;
+  --theme-cta-tertiary--background-color_hover: var(--color-lime-green-600);
+  --theme-cta-tertiary--background-color_focus: var(--color-lime-green-700);
+  --theme-cta-tertiary--background-color_focus-visible: transparent;
+  --theme-cta-tertiary--outline-color_focus-visible: var(--color-azure-blue);
+  --theme-cta-tertiary--text-color: var(--color-grey-900);
+  --theme-cta-tertiary--text-color_focus: var(--color-grey-900);
+  --theme-cta-tertiary--text-color_focus-visible: var(--color-grey-900);
+  --theme-cta-tertiary--text-color_disabled: var(--color-grey-700);
+
+  /* text */
+  --theme-cta-text--background-color: transparent;
+  --theme-cta-text--border-color: var(--theme--background-color);
+  --theme-cta-text--border-color_hover: var(--color-grey-900);
+  --theme-cta-text--border-color_focus-visible: var(--theme--background-color);
+  --theme-cta-text--text-color: var(--color-grey-900);
+  --theme-cta-text--outline-color_focus-visible: var(--color-azure-blue);
+  /* END CTA CUSTOM PROPERTIES */
+
+  /** INPUT CUSTOM PROPERTIES */
+  --theme-input--label-color: var(--color-grey-900);
+  --theme-input--label-optional-color: var(--color-grey-900);
+
+  --theme-input--label-color_disabled: var(--color-grey-700);
+
+  --theme-input--background-color_focus: var(--color-grey-50);
+  --theme-input--outline-color_focus: var(--color-azure-blue);
+  /** END INPUT CUSTOM PROPERTIES */
+}
+
+[data-theme="anthracite"] {
+  --theme--background-color: var(--color-anthracite-grey-800);
+  --theme--text-color: var(--color-white);
+  --theme--text-color--secondary: var(--color-grey-300);
+
+  /* CTA CUSTOM PROPERTIES */
+  /* primary */
+  --theme-cta-primary--background-color: var(--color-lime-green-500);
+  --theme-cta-primary--background-color_hover: var(--color-anthracite-grey-700);
+  --theme-cta-primary--background-color_focus: var(--color-anthracite-grey-600);
+  --theme-cta-primary--background-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-primary--background-color_disabled: var(--color-grey-400);
+  --theme-cta-primary--outline-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-primary--border-color: var(--color-lime-green-500);
+  --theme-cta-primary--border-color_disabled: var(--color-grey-400);
+  --theme-cta-primary--text-color: var(--color-grey-900);
+  --theme-cta-primary--text-color_hover: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_focus: var(--color-lime-green-500);
+  --theme-cta-primary--text-color_focus-visible: var(--color-grey-900);
+  --theme-cta-primary--text-color_disabled: var(--color-grey-800);
+
+  /* secondary */
+  --theme-cta-secondary--background-color: var(--theme-background-color);
+  --theme-cta-secondary--background-color_hover: var(
+    --color-anthracite-grey-700
+  );
+  --theme-cta-secondary--background-color_focus: var(
+    --color-anthracite-grey-600
+  );
+  --theme-cta-secondary--background-color_focus-visible: var(
+    --theme-background-color
+  );
+  --theme-cta-secondary--background-color_disabled: var(--color-grey-700);
+  --theme-cta-secondary--border-color: var(--color-lime-green-500);
+  --theme-cta-secondary--border-color_disabled: var(--color-grey-400);
+  --theme-cta-secondary--outline-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-secondary--text-color: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_hover: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_focus: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-secondary--text-color_disabled: var(--color-grey-200);
+
+  /* tertiary */
+  --theme-cta-tertiary--background-color: transparent;
+  --theme-cta-tertiary--background-color_hover: var(
+    --color-anthracite-grey-700
+  );
+  --theme-cta-tertiary--background-color_focus: var(
+    --color-anthracite-grey-600
+  );
+  --theme-cta-tertiary--outline-color_focus-visible: var(
+    --color-lime-green-500
+  );
+  --theme-cta-tertiary--text-color: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_hover: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_focus: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-tertiary--text-color_disabled: var(--color-grey-400);
+
+  /* text */
+  --theme-cta-text--background-color: transparent;
+  --theme-cta-text--border-color: transparent;
+  --theme-cta-text--border-color_hover: var(--color-white);
+  --theme-cta-text--border-color_focus-visible: var(--theme--background-color);
+  --theme-cta-text--text-color: var(--color-white);
+  --theme-cta-text--outline-color_focus-visible: var(--color-lime-green-500);
+
+  /* tonal */
+  --theme-cta-tonal--background-color: var(--color-anthracite-grey-700);
+  --theme-cta-tonal--background-color_hover: var(--color-anthracite-grey-600);
+  --theme-cta-tonal--background-color_focus: var(--color-anthracite-grey-500);
+  --theme-cta-tonal--background-color_focus-visible: var(
+    --color-anthracite-grey-700
+  );
+  --theme-cta-tonal--background-color_selected: var(--color-white);
+  --theme-cta-tonal--outline-color_focus-visible: var(--color-lime-green-500);
+  --theme-cta-tonal--border-color: var(--color-anthracite-grey-700);
+  --theme-cta-tonal--border-color_hover: var(--color-anthracite-grey-600);
+  --theme-cta-tonal--border-color_focus: var(--color-anthracite-grey-500);
+  --theme-cta-tonal--border-color_focus-visible: var(
+    --color-anthracite-grey-700
+  );
+  --theme-cta-tonal--border-color_selected: var(--color-white);
+  --theme-cta-tonal--text-color: var(--color-white);
+  --theme-cta-tonal--text-color_hover: var(--color-white);
+  --theme-cta-tonal--text-color_focus: var(--color-white);
+  --theme-cta-tonal--text-color_focus-visible: var(--color-white);
+  --theme-cta-tonal--text-color_selected: var(--color-grey-900);
+  /* END CTA CUSTOM PROPERTIES */
+
+  /** INPUT CUSTOM PROPERTIES */
+  --theme-input--border-color: var(--color-grey-300);
+
+  --theme-input--label-color: var(--color-white);
+  --theme-input--label-optional-color: var(--color-grey-350);
+
+  --theme-input--border-color_disabled: var(--color-grey-400);
+
+  --theme-input--label-color_disabled: var(--color-grey-400);
+
+  --theme-input--background-color_focus: var(--color-grey-50);
+  --theme-input--outline-color_focus: var(--color-lime-green-500);
+  /** END INPUT CUSTOM PROPERTIES */
+}

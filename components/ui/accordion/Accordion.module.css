@@ -1,0 +1,7 @@
+.accordion[open] svg {
+  transform: rotate(180deg);
+}
+
+.accordion summary {
+  border-bottom: 2px solid var(--color-grey-900);
+}
